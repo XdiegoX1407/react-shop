@@ -22,6 +22,7 @@ const MyOrder = () => {
         {state.cart.map((product) => (
           <OrderItem product={product} key={`orderItem-${product.id}`} />
         ))}
+      <div className="order-total">
         <div className="order">
           <p>
             <span>Total</span>
@@ -29,6 +30,7 @@ const MyOrder = () => {
           <p>${sumTotal()}</p>
         </div>
         <button className="primary-button">Checkout</button>
+      </div>
       </div>
     </aside>
   );
